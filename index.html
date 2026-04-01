@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliyuExpress | Digital & Luxury Services</title>
+    <style>
+        :root { --ali-red: #ff4747; --paga-green: #3ab54a; }
+        body { font-family: sans-serif; margin: 0; background: #f2f2f2; padding-bottom: 50px; }
+        header { background: var(--ali-red); color: white; padding: 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 15px; }
+        .card { background: white; padding: 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn { background: var(--paga-green); color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; font-weight: bold; margin-top: 12px; cursor: pointer; }
+        .full-card { grid-column: span 2; background: white; padding: 20px; border-radius: 12px; border-top: 5px solid var(--ali-red); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="margin:0;">AliyuExpress</h1>
+    <p style="margin:5px 0 0;">Luxury Services & Digital Hub</p>
+</header>
+
+<div class="grid">
+    <div class="card">
+        <div style="font-size: 40px;">📱</div>
+        <strong>Airtime</strong>
+        <button class="btn" onclick="order('Airtime')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <div style="font-size: 40px;">📶</div>
+        <strong>Data Bundle</strong>
+        <button class="btn" onclick="order('Mobile Data')">Buy Now</button>
+    </div>
+
+    <div class="full-card">
+        <div style="font-size: 40px; text-align: center;">🌌</div>
+        <h3>Infinity Illusion Floor</h3>
+        <p>3D Epoxy & Mirror Magic. Booking Fee: ₦5,000</p>
+        <button class="btn" onclick="order('Infinity Floor Inspection')">Book Inspection</button>
+    </div>
+
+    <div class="full-card">
+        <div style="font-size: 40px; text-align: center;">🎁</div>
+        <h3>Sell Gift Cards</h3>
+        <p>Highest rates for iTunes, Steam, & Amazon.</p>
+        <button class="btn" style="background: #333;" onclick="order('Selling Gift Card')">Chat to Sell</button>
+    </div>
+</div>
+
+<div style="text-align: center; padding: 20px; color: #888; font-size: 12px;">
+    Payments via Paga: 2560709331
+</div>
+
+<script>
+    function order(item) {
+        const phone = "2347039597622";
+        const message = `Hello AliyuExpress, I want to order: ${item}. Please send payment details.`;
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
+    }
+</script>
+
+</body>
+</html>
